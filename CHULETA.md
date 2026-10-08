@@ -9,3 +9,4 @@
 - `git pull`: descarga e integra los cambios del servidor remoto
 - `git branch`: lista o crea ramas locales
 - `git switch <rama>`: cambia a la rama indicada
+- `git merge`: fusiona la rama indicada en la rama actual (VERSION EXPERIMENTO)
