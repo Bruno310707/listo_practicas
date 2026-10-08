@@ -17,3 +17,4 @@ instance/
 .idea/
 .DS_Store
 secretos.env
+config.local
