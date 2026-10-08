@@ -7,3 +7,5 @@
 - `git blame <fichero>`: muestra qué autor modificó cada línea
 - `git fetch`: descarga novedades del servidor sin alterar el código local
 - `git pull`: descarga e integra los cambios del servidor remoto
+- `git branch`: lista o crea ramas locales
+- `git switch <rama>`: cambia a la rama indicada
