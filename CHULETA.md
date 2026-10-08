@@ -4,3 +4,6 @@
 - `git commit -m "mensaje"`: guarda lo preparado en un commit
 - `git diff`: lo que has cambiado y aún no has preparado
 - `git diff --staged`: lo que ya está preparado
+- `git blame <fichero>`: muestra qué autor modificó cada línea
+- `git fetch`: descarga novedades del servidor sin alterar el código local
+- `git pull`: descarga e integra los cambios del servidor remoto
