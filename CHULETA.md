@@ -4,5 +4,3 @@
 - `git commit -m "mensaje"`: guarda lo preparado en un commit
 - `git diff`: lo que has cambiado y aún no has preparado
 - `git diff --staged`: lo que ya está preparado
-- `git restore <fichero>`: descarta cambios en el directorio de trabajo
-- `git commit --amend`: modifica o añade cambios al último commit
