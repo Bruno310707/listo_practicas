@@ -12,6 +12,7 @@
         <form method="post" novalidate>
           {{ form.hidden_tag() }}
           {{ render_field(form.title, autofocus=true) }}
+          <small id="contador-caracteres" class="form-text text-muted d-block mb-3">0 / 100 caracteres</small>
           {{ render_field(form.description, rows=4) }}
           <div class="d-flex gap-2">
             {{ form.submit(class="btn btn-primary") }}
@@ -22,4 +23,8 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/tareas.js') }}"></script>
 {% endblock %}
