@@ -18,3 +18,4 @@ instance/
 .DS_Store
 secretos.env
 config.local
+.coverage
