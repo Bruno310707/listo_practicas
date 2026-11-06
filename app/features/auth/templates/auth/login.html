@@ -9,7 +9,8 @@
       <div class="card-body p-4">
         <h1 class="h3 mb-4"><i class="bi bi-box-arrow-in-right me-2 text-primary"></i>Entrar</h1>
 
-        <form method="post" novalidate>
+        <!-- 🟢 id="entrar" añadido al formulario -->
+        <form id="entrar" method="post" novalidate>
           {{ form.hidden_tag() }}
           {{ render_field(form.email, autofocus=true) }}
           {{ render_field(form.password) }}
@@ -24,4 +25,10 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+<!-- 🟢 Carga de scripts de validación -->
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/validacion.js') }}"></script>
+<script src="{{ url_for('static', filename='js/entrar.js') }}"></script>
 {% endblock %}
