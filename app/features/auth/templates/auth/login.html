@@ -9,11 +9,21 @@
       <div class="card-body p-4">
         <h1 class="h3 mb-4"><i class="bi bi-box-arrow-in-right me-2 text-primary"></i>Entrar</h1>
 
-        <!-- 🟢 id="entrar" añadido al formulario -->
         <form id="entrar" method="post" novalidate>
           {{ form.hidden_tag() }}
           {{ render_field(form.email, autofocus=true) }}
-          {{ render_field(form.password) }}
+          
+          <!-- 🟢 Campo de contraseña con botón de ojo -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="password" name="password" required>
+              <button class="btn btn-outline-secondary" type="button" id="toggle-password" aria-label="Mostrar contraseña">
+                <i class="bi bi-eye"></i>
+              </button>
+            </div>
+          </div>
+
           {{ render_checkbox(form.remember) }}
           {{ form.submit(class="btn btn-primary w-100") }}
         </form>
@@ -27,8 +37,9 @@
 </div>
 {% endblock %}
 
-<!-- 🟢 Carga de scripts de validación -->
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/validacion.js') }}"></script>
 <script src="{{ url_for('static', filename='js/entrar.js') }}"></script>
+<!-- 🟢 Carga del conmutador de contraseña -->
+<script src="{{ url_for('static', filename='js/ver_clave.js') }}"></script>
 {% endblock %}
