@@ -9,10 +9,14 @@
       <div class="card-body p-4">
         <h1 class="h3 mb-4">{{ title }}</h1>
 
-        <form method="post" novalidate>
+        <form id="tarea" method="post" novalidate>
           {{ form.hidden_tag() }}
           {{ render_field(form.title, autofocus=true) }}
-          <small id="contador-caracteres" class="form-text text-muted d-block mb-3">0 / 100 caracteres</small>
+          <small id="contador-caracteres" class="form-text text-muted d-block mb-2">0 / 100 caracteres</small>
+          
+          <!-- 🟢 VISTA PREVIA (EJERCICIO 9) -->
+          <p class="text-muted small mb-3">Vista previa: <strong id="vista-previa" class="text-dark"></strong></p>
+
           {{ render_field(form.description, rows=4) }}
           <div class="d-flex gap-2">
             {{ form.submit(class="btn btn-primary") }}
