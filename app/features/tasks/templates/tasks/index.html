@@ -15,7 +15,7 @@
   </a>
 </div>
 
-<!-- 🟢 BUSCADOR EN TIEMPO REAL -->
+<!-- BUSCADOR EN TIEMPO REAL -->
 <div class="mb-3">
   <input type="text" id="buscador-tareas" class="form-control" placeholder="Buscar tarea por título o descripción...">
 </div>
@@ -41,7 +41,8 @@
          title="Editar" aria-label="Editar">
         <i class="bi bi-pencil"></i>
       </a>
-      <form method="post" action="{{ url_for('tasks.delete', task_id=task.id) }}" class="form-eliminar">
+      <!-- 🟢 1. CAMBIO AQUÍ: Se usa class="form-borrar" en lugar de form-eliminar -->
+      <form method="post" action="{{ url_for('tasks.delete', task_id=task.id) }}" class="form-borrar">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
         <button class="btn btn-outline-danger btn-sm" type="submit" title="Eliminar" aria-label="Eliminar">
             <i class="bi bi-trash"></i>
@@ -65,4 +66,6 @@
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/tasks.js') }}"></script>
 <script src="{{ url_for('static', filename='js/tareas.js') }}"></script>
+<!-- 🟢 2. CAMBIO AQUÍ: Se añade el script borrar.js -->
+<script src="{{ url_for('static', filename='js/borrar.js') }}"></script>
 {% endblock %}

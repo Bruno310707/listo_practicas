@@ -27,17 +27,6 @@ if (campoTitulo) {
     });
 }
 
-// 2. Confirmación al eliminar tareas
-const formulariosEliminar = document.querySelectorAll(".form-eliminar");
-
-formulariosEliminar.forEach((formulario) => {
-    formulario.addEventListener("submit", (evento) => {
-        if (!confirm("¿Eliminar esta tarea?")) {
-            evento.preventDefault();
-        }
-    });
-});
-
 // 3. Filtro de tareas en tiempo real
 const buscador = document.getElementById("buscador-tareas");
 
