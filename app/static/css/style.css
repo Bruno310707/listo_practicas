@@ -50,3 +50,8 @@ body {
 .correcto:focus {
     border: 2px solid #1f7a4d;
 }
+
+/* Resaltado de coincidencias en la búsqueda */
+.coincide {
+    background-color: #ffe8ba;
+}

@@ -27,21 +27,3 @@ if (campoTitulo) {
     });
 }
 
-// 3. Filtro de tareas en tiempo real
-const buscador = document.getElementById("buscador-tareas");
-
-if (buscador) {
-    buscador.addEventListener("input", () => {
-        const textoBusqueda = buscador.value.toLowerCase().trim();
-        const tareas = document.querySelectorAll("[data-task-item]");
-
-        tareas.forEach((tarea) => {
-            const contenido = tarea.textContent.toLowerCase();
-            if (contenido.includes(textoBusqueda)) {
-                tarea.classList.remove("d-none");
-            } else {
-                tarea.classList.add("d-none");
-            }
-        });
-    });
-}
